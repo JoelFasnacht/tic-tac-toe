@@ -4,6 +4,8 @@ var tie = 0;
 var count = 0;
 var turn = 1;
 
+var pop = new Audio("pop.mp3");
+
 
 
 
@@ -46,7 +48,8 @@ function checkWinO(){
 
 $(".box").click(function(){
    
-    
+    pop.play();
+
         if(turn === 1 && count < 9){
             $(this).text("X")
             $(this).addClass("X")
