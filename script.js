@@ -33,7 +33,7 @@ function checkWinX(){
 }
 function checkWinO(){
    if($(".row-1 .O").length === 3 || $(".row-2 .box.O").length === 3 
-    || $(".row-3 .box.X").length === 3 ||
+    || $(".row-3 .box.O").length === 3 ||
     $(".col-1.O").length === 3 || $(".col-2.O").length === 3 || $(".col-3.O").length === 3 ||
     $("#box-1").hasClass("O") && $("#box-5").hasClass("O") && $("#box-9").hasClass("O") || 
     $("#box-3").hasClass("O") && $("#box-5").hasClass("O") && $("#box-7").hasClass("O")){
@@ -86,6 +86,7 @@ $(".box").click(function(){
             p2Score++
             count = 0
             $("#p2-score").text(p2Score)
+            $(".box").removeClass("X O")
             clearBoard();
         }
         else if(count === 9){
